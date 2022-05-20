@@ -1,7 +1,6 @@
 import PdfPrinter from "pdfmake"
 import striptags from "striptags"
 import axios from "axios"
-import { parse } from "dotenv"
 
 const fonts = {
   Roboto: {
