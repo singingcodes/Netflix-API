@@ -54,7 +54,10 @@ mediaRouter.get("/", async (req, res, next) => {
           `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}&t=${req.query.title}`
         )
         const newMedia = {
-          ...data,
+          title: data.Title,
+          year: data.Year,
+          type: data.Type,
+          poster: data.Poster,
           createdAt: new Date(),
           imdbID: uniqid(),
           reviews: [],
